@@ -147,8 +147,9 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
 
             TelaVisualizarItensForm telaTema = new TelaVisualizarItensForm(tema);
             telaTema.ShowDialog();
-            
-          
+
+            telaTema.ShowDialog();
+
         }
 
 

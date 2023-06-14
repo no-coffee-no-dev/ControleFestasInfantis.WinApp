@@ -32,6 +32,7 @@
             Itens = new GroupBox();
             listaItens = new ListBox();
             lblNomeDoTema = new Label();
+            this.listaItens = new ListBox();
             Itens.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,6 +76,16 @@
             lblNomeDoTema.Size = new Size(86, 37);
             lblNomeDoTema.TabIndex = 33;
             lblNomeDoTema.Text = "Tema";
+            // 
+            // listaItens
+            // 
+            this.listaItens.Dock = DockStyle.Fill;
+            this.listaItens.FormattingEnabled = true;
+            this.listaItens.ItemHeight = 15;
+            this.listaItens.Location = new Point(3, 19);
+            this.listaItens.Name = "listaItens";
+            this.listaItens.Size = new Size(397, 371);
+            this.listaItens.TabIndex = 34;
             // 
             // TelaVisualizarItensForm
             // 

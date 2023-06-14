@@ -51,7 +51,7 @@ namespace ControleFestasInfantis.WinApp.ModuloItem
                 new DataGridViewTextBoxColumn()
                 {
                     Name = "preco",
-                    HeaderText = "Preco"
+                    HeaderText = "Preço"
                 }
             };
 

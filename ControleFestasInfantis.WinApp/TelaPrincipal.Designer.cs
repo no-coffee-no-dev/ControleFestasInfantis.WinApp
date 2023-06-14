@@ -41,7 +41,7 @@
             btnEditar = new ToolStripButton();
             btnDeletar = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
-            VisualizarItens = new ToolStripButton();
+            btnVisualizarItens = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             lblTipoCadastro = new ToolStripLabel();
             panelRegistros = new Panel();
@@ -110,7 +110,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnDeletar, toolStripSeparator2, VisualizarItens, toolStripSeparator1, lblTipoCadastro });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnDeletar, toolStripSeparator2, btnVisualizarItens, toolStripSeparator1, lblTipoCadastro });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 45);
@@ -158,17 +158,17 @@
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(6, 45);
             // 
-            // VisualizarItens
+            // btnVisualizarItens
             // 
-            VisualizarItens.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            VisualizarItens.Image = Properties.Resources.list;
-            VisualizarItens.ImageScaling = ToolStripItemImageScaling.None;
-            VisualizarItens.ImageTransparentColor = Color.Magenta;
-            VisualizarItens.Name = "VisualizarItens";
-            VisualizarItens.Padding = new Padding(7);
-            VisualizarItens.Size = new Size(42, 42);
-            VisualizarItens.Text = "Visualizar Itens";
-            VisualizarItens.Click += VisualizarItens_Click;
+            btnVisualizarItens.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnVisualizarItens.Image = Properties.Resources.list;
+            btnVisualizarItens.ImageScaling = ToolStripItemImageScaling.None;
+            btnVisualizarItens.ImageTransparentColor = Color.Magenta;
+            btnVisualizarItens.Name = "btnVisualizarItens";
+            btnVisualizarItens.Padding = new Padding(7);
+            btnVisualizarItens.Size = new Size(42, 42);
+            btnVisualizarItens.Text = "Visualizar Itens";
+            btnVisualizarItens.Click += VisualizarItens_Click;
             // 
             // toolStripSeparator1
             // 
@@ -246,7 +246,7 @@
         private Panel panelRegistros;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel lblRodape;
-        private ToolStripButton VisualizarItens;
+        private ToolStripButton btnVisualizarItens;
         private ToolStripSeparator toolStripSeparator1;
     }
 }

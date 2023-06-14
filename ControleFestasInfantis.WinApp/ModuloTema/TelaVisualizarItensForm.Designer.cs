@@ -30,6 +30,7 @@
         {
             btnFechar = new Button();
             Itens = new GroupBox();
+            listaItens = new ListBox();
             lblNomeDoTema = new Label();
             this.listaItens = new ListBox();
             Itens.SuspendLayout();
@@ -48,13 +49,23 @@
             // 
             // Itens
             // 
-            Itens.Controls.Add(this.listaItens);
+            Itens.Controls.Add(listaItens);
             Itens.Location = new Point(8, 63);
             Itens.Name = "Itens";
             Itens.Size = new Size(403, 393);
             Itens.TabIndex = 32;
             Itens.TabStop = false;
             Itens.Text = "Itens";
+            // 
+            // listaItens
+            // 
+            listaItens.Dock = DockStyle.Fill;
+            listaItens.FormattingEnabled = true;
+            listaItens.ItemHeight = 15;
+            listaItens.Location = new Point(3, 19);
+            listaItens.Name = "listaItens";
+            listaItens.Size = new Size(397, 371);
+            listaItens.TabIndex = 34;
             // 
             // lblNomeDoTema
             // 

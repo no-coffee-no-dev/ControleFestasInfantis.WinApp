@@ -18,7 +18,7 @@ namespace ControleFestasInfantis.WinApp.Compartilhado
         public abstract bool BotaoInserirAtivado { get; }
         public abstract bool BotaoDeletarAtivado { get; }
         public abstract bool BotaoEditarAtivado { get; }
-        public abstract bool BotaoInserirItemAtivado { get; }
+        public abstract bool BotaoVisualizarItensAtivado { get; }
 
 
 

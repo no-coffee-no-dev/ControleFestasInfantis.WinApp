@@ -70,6 +70,7 @@ namespace ControleFestasInfantis.WinApp
             btnInserir.Enabled = controlador.BotaoInserirAtivado;
             btnEditar.Enabled = controlador.BotaoEditarAtivado;
             btnDeletar.Enabled = controlador.BotaoDeletarAtivado;
+            btnVisualizarItens.Enabled = controlador.BotaoVisualizarItensAtivado;
         }
 
         private void ConfigurarToolTips(ControladorBase controlador)

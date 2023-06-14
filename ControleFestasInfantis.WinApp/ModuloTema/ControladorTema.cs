@@ -41,7 +41,7 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
 
         public override bool BotaoEditarAtivado => true;
 
-        public override bool BotaoInserirItemAtivado => true;
+        public override bool BotaoVisualizarItensAtivado => true;
 
         public override void CarregarEntidades()
         {
@@ -82,10 +82,9 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
         {
             Tema tema = ObterEntidadeSelecionada();
 
-            if (tema
-                == null)
+            if (tema == null)
             {
-                MessageBox.Show($"Selecione umtema primeiro!",
+                MessageBox.Show($"Selecione um tema primeiro!",
                     "Edição de Temas",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
@@ -136,10 +135,20 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
         {
             Tema tema = ObterEntidadeSelecionada();
 
+            if (tema == null || tema.itens.Count == 0)
+            {
+                MessageBox.Show($"Selecione um tema com itens primeiro!",
+                    "Visualização de Itens do Tema",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
+                return;
+            }
+
             TelaVisualizarItensForm telaTema = new TelaVisualizarItensForm(tema);
-
             telaTema.ShowDialog();
-
+            
+          
         }
 
 

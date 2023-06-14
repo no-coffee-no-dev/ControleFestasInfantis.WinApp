@@ -31,7 +31,7 @@ namespace ControleFestasInfantis.WinApp.ModuloCliente
 
         public override bool BotaoEditarAtivado => true;
 
-        public override bool BotaoInserirItemAtivado => false;
+        public override bool BotaoVisualizarItensAtivado => false;
 
         public override void Deletar()
         {

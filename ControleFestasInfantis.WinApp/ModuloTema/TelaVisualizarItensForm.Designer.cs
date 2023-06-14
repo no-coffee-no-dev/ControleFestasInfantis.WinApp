@@ -30,8 +30,8 @@
         {
             btnFechar = new Button();
             Itens = new GroupBox();
+            listaItens = new ListBox();
             lblNomeDoTema = new Label();
-            this.listaItens = new ListBox();
             Itens.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,13 +48,23 @@
             // 
             // Itens
             // 
-            Itens.Controls.Add(this.listaItens);
+            Itens.Controls.Add(listaItens);
             Itens.Location = new Point(8, 63);
             Itens.Name = "Itens";
             Itens.Size = new Size(403, 393);
             Itens.TabIndex = 32;
             Itens.TabStop = false;
             Itens.Text = "Itens";
+            // 
+            // listaItens
+            // 
+            listaItens.Dock = DockStyle.Fill;
+            listaItens.FormattingEnabled = true;
+            listaItens.ItemHeight = 15;
+            listaItens.Location = new Point(3, 19);
+            listaItens.Name = "listaItens";
+            listaItens.Size = new Size(397, 371);
+            listaItens.TabIndex = 34;
             // 
             // lblNomeDoTema
             // 
@@ -65,16 +75,6 @@
             lblNomeDoTema.Size = new Size(86, 37);
             lblNomeDoTema.TabIndex = 33;
             lblNomeDoTema.Text = "Tema";
-            // 
-            // listaItens
-            // 
-            this.listaItens.Dock = DockStyle.Fill;
-            this.listaItens.FormattingEnabled = true;
-            this.listaItens.ItemHeight = 15;
-            this.listaItens.Location = new Point(3, 19);
-            this.listaItens.Name = "listaItens";
-            this.listaItens.Size = new Size(397, 371);
-            this.listaItens.TabIndex = 34;
             // 
             // TelaVisualizarItensForm
             // 

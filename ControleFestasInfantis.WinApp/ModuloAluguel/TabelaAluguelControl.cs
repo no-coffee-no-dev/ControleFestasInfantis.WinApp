@@ -80,7 +80,7 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
             tabelaAluguels.Rows.Clear();
             foreach (Aluguel aluguel in aluguels)
             {
-                tabelaAluguels.Rows.Add(aluguel.id, aluguel.cliente.nome, aluguel.tema.nome, aluguel.valorTotal, aluguel.date.ToString("dd/MM/yy"),aluguel.horaInicio.ToString("H/m"),aluguel.horaTermino.ToString("H/m"));
+                tabelaAluguels.Rows.Add(aluguel.id, aluguel.cliente.nome, aluguel.tema.nome, aluguel.valorTotal, aluguel.date.ToString("dd/MM/yy"),aluguel.horaInicio.ToString("t"),aluguel.horaTermino.ToString("t"));
             }
         }
 

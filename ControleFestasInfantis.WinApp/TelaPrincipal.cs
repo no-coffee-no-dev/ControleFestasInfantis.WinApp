@@ -1,9 +1,12 @@
+using ControleFestasInfantis.Dominio.ModuloAluguel;
 using ControleFestasInfantis.Dominio.ModuloCliente;
 using ControleFestasInfantis.Dominio.ModuloItem;
 using ControleFestasInfantis.Dominio.ModuloTema;
+using ControleFestasInfantis.Infra.Data.Memoria.ModuloAluguel;
 using ControleFestasInfantis.Infra.Data.Memoria.ModuloCliente;
 using ControleFestasInfantis.Infra.Data.Memoria.ModuloItem;
 using ControleFestasInfantis.Infra.Data.Memoria.ModuloTema;
+using ControleFestasInfantis.WinApp.ModuloAluguel;
 using ControleFestasInfantis.WinApp.ModuloCliente;
 using ControleFestasInfantis.WinApp.ModuloItem;
 using ControleFestasInfantis.WinApp.ModuloTema;
@@ -19,6 +22,7 @@ namespace ControleFestasInfantis.WinApp
         private IRepositorioCliente repositorioCliente = new RepositorioClienteEmMomoria(new List<Cliente>());
         private IRepositorioTema repositorioTema = new RepositorioTemaEmMomoria(new List<Tema>());
         private IRepositorioItem repositorioItem = new RepositorioItemEmMemoria(new List<Item>());
+        private IRepositorioAluguel repositorioAluguel = new RepositorioAluguelEmMemoria(new List<Aluguel>());
 
         private static TelaPrincipal telaPrincipal;
         public TelaPrincipal()
@@ -109,6 +113,12 @@ namespace ControleFestasInfantis.WinApp
             controlador = new ControladorItem(repositorioItem);
             ConfigurarTelaPrincipal(controlador);
         }
+        private void aluguelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorAluguel(repositorioAluguel,repositorioCliente,repositorioTema);
+            ConfigurarTelaPrincipal(controlador);
+
+        }
 
 
 
@@ -157,6 +167,6 @@ namespace ControleFestasInfantis.WinApp
             return false;
         }
 
-
+        
     }
 }

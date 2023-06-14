@@ -1,4 +1,4 @@
-﻿using ControleFestasInfantis.Dominio.ModuloItem;
+﻿using ControleFestasInfantis.Dominio.ModuloAluguel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ControleFestasInfantis.Infra.Data.Memoria.ModuloAluguel
 {
-    internal class RepositorioAluguelEmMemoria : RepositorioBaseEmMemoria<Aluguel>, IRepositorioAlguel
+    public class RepositorioAluguelEmMemoria : RepositorioBaseEmMemoria<Aluguel>, IRepositorioAluguel
     {
-        public RepositorioItemEmMemoria(List<Alguel> listaDeEntidades)
+        public RepositorioAluguelEmMemoria(List<Aluguel> listaDeEntidades)
         {
             listaEntidades = listaDeEntidades;
         }

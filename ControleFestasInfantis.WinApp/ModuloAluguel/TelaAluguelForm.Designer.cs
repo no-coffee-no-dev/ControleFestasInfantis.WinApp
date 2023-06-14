@@ -1,6 +1,6 @@
 ﻿namespace ControleFestasInfantis.WinApp.ModuloAluguel
 {
-    partial class TelaAluguelFom
+    partial class TelaAluguelForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
             label2 = new Label();
             CBX_CLIENTE = new ComboBox();
             label3 = new Label();
@@ -40,8 +39,13 @@
             CBX_TEMA = new ComboBox();
             DTP_HORAINICIO = new DateTimePicker();
             DTP_HORATERMINO = new DateTimePicker();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            TXT_VALORTOTAL = new TextBox();
+            TXT_ENDERECO = new TextBox();
+            btnGravar = new Button();
+            btnCancelar = new Button();
+            txtId = new TextBox();
+            label8 = new Label();
+            DTP_DATA = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
@@ -52,13 +56,6 @@
             label1.Size = new Size(18, 15);
             label1.TabIndex = 0;
             label1.Text = "ID";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(70, 27);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(83, 23);
-            textBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -72,7 +69,7 @@
             // CBX_CLIENTE
             // 
             CBX_CLIENTE.FormattingEnabled = true;
-            CBX_CLIENTE.Location = new Point(70, 56);
+            CBX_CLIENTE.Location = new Point(70, 59);
             CBX_CLIENTE.Name = "CBX_CLIENTE";
             CBX_CLIENTE.Size = new Size(117, 23);
             CBX_CLIENTE.TabIndex = 3;
@@ -80,7 +77,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 132);
+            label3.Location = new Point(12, 197);
             label3.Name = "label3";
             label3.Size = new Size(65, 15);
             label3.TabIndex = 4;
@@ -89,7 +86,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 159);
+            label4.Location = new Point(12, 232);
             label4.Name = "label4";
             label4.Size = new Size(79, 15);
             label4.TabIndex = 5;
@@ -98,7 +95,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 198);
+            label5.Location = new Point(12, 301);
             label5.Name = "label5";
             label5.Size = new Size(61, 15);
             label5.TabIndex = 6;
@@ -107,7 +104,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(12, 229);
+            label6.Location = new Point(12, 269);
             label6.Name = "label6";
             label6.Size = new Size(115, 15);
             label6.TabIndex = 7;
@@ -129,42 +126,102 @@
             CBX_TEMA.Name = "CBX_TEMA";
             CBX_TEMA.Size = new Size(117, 23);
             CBX_TEMA.TabIndex = 9;
+            CBX_TEMA.SelectedIndexChanged += CBX_TEMA_SelectedIndexChanged;
             // 
             // DTP_HORAINICIO
             // 
-            DTP_HORAINICIO.Location = new Point(97, 124);
+            DTP_HORAINICIO.Format = DateTimePickerFormat.Time;
+            DTP_HORAINICIO.Location = new Point(97, 197);
             DTP_HORAINICIO.Name = "DTP_HORAINICIO";
+            DTP_HORAINICIO.ShowUpDown = true;
             DTP_HORAINICIO.Size = new Size(200, 23);
             DTP_HORAINICIO.TabIndex = 10;
             // 
             // DTP_HORATERMINO
             // 
-            DTP_HORATERMINO.Location = new Point(97, 159);
+            DTP_HORATERMINO.Format = DateTimePickerFormat.Time;
+            DTP_HORATERMINO.Location = new Point(97, 232);
             DTP_HORATERMINO.Name = "DTP_HORATERMINO";
+            DTP_HORATERMINO.ShowUpDown = true;
             DTP_HORATERMINO.Size = new Size(200, 23);
             DTP_HORATERMINO.TabIndex = 11;
             // 
-            // textBox2
+            // TXT_VALORTOTAL
             // 
-            textBox2.Location = new Point(97, 190);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(83, 23);
-            textBox2.TabIndex = 12;
+            TXT_VALORTOTAL.Location = new Point(79, 298);
+            TXT_VALORTOTAL.Name = "TXT_VALORTOTAL";
+            TXT_VALORTOTAL.ReadOnly = true;
+            TXT_VALORTOTAL.Size = new Size(83, 23);
+            TXT_VALORTOTAL.TabIndex = 12;
             // 
-            // textBox3
+            // TXT_ENDERECO
             // 
-            textBox3.Location = new Point(133, 226);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(83, 23);
-            textBox3.TabIndex = 13;
+            TXT_ENDERECO.Location = new Point(133, 266);
+            TXT_ENDERECO.Name = "TXT_ENDERECO";
+            TXT_ENDERECO.Size = new Size(83, 23);
+            TXT_ENDERECO.TabIndex = 13;
+            // 
+            // btnGravar
+            // 
+            btnGravar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnGravar.DialogResult = DialogResult.OK;
+            btnGravar.Location = new Point(106, 364);
+            btnGravar.Name = "btnGravar";
+            btnGravar.Size = new Size(75, 41);
+            btnGravar.TabIndex = 31;
+            btnGravar.Text = "Gravar";
+            btnGravar.UseVisualStyleBackColor = true;
+            btnGravar.Click += btnGravar_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCancelar.DialogResult = DialogResult.Cancel;
+            btnCancelar.Location = new Point(202, 364);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 41);
+            btnCancelar.TabIndex = 32;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // txtId
+            // 
+            txtId.Location = new Point(70, 27);
+            txtId.Name = "txtId";
+            txtId.ReadOnly = true;
+            txtId.Size = new Size(100, 23);
+            txtId.TabIndex = 33;
+            txtId.Text = "0";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(12, 159);
+            label8.Name = "label8";
+            label8.Size = new Size(87, 15);
+            label8.TabIndex = 34;
+            label8.Text = "Data do Evento";
+            // 
+            // DTP_DATA
+            // 
+            DTP_DATA.Format = DateTimePickerFormat.Short;
+            DTP_DATA.Location = new Point(97, 153);
+            DTP_DATA.Name = "DTP_DATA";
+            DTP_DATA.Size = new Size(200, 23);
+            DTP_DATA.TabIndex = 35;
             // 
             // TelaAluguelFom
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(476, 358);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            ClientSize = new Size(410, 434);
+            Controls.Add(DTP_DATA);
+            Controls.Add(label8);
+            Controls.Add(txtId);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnGravar);
+            Controls.Add(TXT_ENDERECO);
+            Controls.Add(TXT_VALORTOTAL);
             Controls.Add(DTP_HORATERMINO);
             Controls.Add(DTP_HORAINICIO);
             Controls.Add(CBX_TEMA);
@@ -175,7 +232,6 @@
             Controls.Add(label3);
             Controls.Add(CBX_CLIENTE);
             Controls.Add(label2);
-            Controls.Add(textBox1);
             Controls.Add(label1);
             Name = "TelaAluguelFom";
             Text = "TelaAluguelFom";
@@ -186,7 +242,6 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
         private Label label2;
         private ComboBox CBX_CLIENTE;
         private Label label3;
@@ -197,7 +252,12 @@
         private ComboBox CBX_TEMA;
         private DateTimePicker DTP_HORAINICIO;
         private DateTimePicker DTP_HORATERMINO;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox TXT_VALORTOTAL;
+        private TextBox TXT_ENDERECO;
+        private Button btnGravar;
+        private Button btnCancelar;
+        private TextBox txtId;
+        private Label label8;
+        private DateTimePicker DTP_DATA;
     }
 }

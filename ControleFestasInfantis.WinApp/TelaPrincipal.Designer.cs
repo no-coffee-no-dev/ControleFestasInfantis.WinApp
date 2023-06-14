@@ -71,13 +71,14 @@
             // aluguelToolStripMenuItem
             // 
             aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
-            aluguelToolStripMenuItem.Size = new Size(115, 22);
+            aluguelToolStripMenuItem.Size = new Size(180, 22);
             aluguelToolStripMenuItem.Text = "Aluguel";
+            aluguelToolStripMenuItem.Click += aluguelToolStripMenuItem_Click;
             // 
             // clienteToolStripMenuItem
             // 
             clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            clienteToolStripMenuItem.Size = new Size(115, 22);
+            clienteToolStripMenuItem.Size = new Size(180, 22);
             clienteToolStripMenuItem.Text = "Cliente";
             clienteToolStripMenuItem.Click += clienteToolStripMenuItem_Click;
             // 
@@ -85,7 +86,7 @@
             // 
             despesasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { temasToolStripMenuItem1, itensToolStripMenuItem });
             despesasToolStripMenuItem.Name = "despesasToolStripMenuItem";
-            despesasToolStripMenuItem.Size = new Size(115, 22);
+            despesasToolStripMenuItem.Size = new Size(180, 22);
             despesasToolStripMenuItem.Text = "Temas";
             // 
             // temasToolStripMenuItem1

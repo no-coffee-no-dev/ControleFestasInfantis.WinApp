@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ControleFestasInfantis.Dominio.ModuloAluguel
 {
-    internal interface IRepositorioAluguel: IRepositorio<Aluguel>
+    public interface IRepositorioAluguel: IRepositorio<Aluguel>
     {
     }
 }

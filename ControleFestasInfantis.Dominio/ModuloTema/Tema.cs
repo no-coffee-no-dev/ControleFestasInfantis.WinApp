@@ -12,7 +12,7 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
     {
         public string nome;
         public List<Item> itens;
-
+        public decimal valorTema;
         public Tema(string nome, List<Item> itens)
         {
             this.nome = nome;
@@ -23,6 +23,16 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
         {
             nome = entidadeAtualizada.nome;
             itens = entidadeAtualizada.itens;
+        }
+
+        public decimal ObterValorTema()
+        {
+            valorTema = 0;
+            foreach (Item item in itens)
+            {
+                valorTema += Convert.ToDecimal(item.preco);
+            }
+            return valorTema;
         }
 
         public override string[] Validar()

@@ -46,6 +46,9 @@
             txtId = new TextBox();
             label8 = new Label();
             DTP_DATA = new DateTimePicker();
+            label9 = new Label();
+            txtPercentual = new TextBox();
+            btnCalcularValorTotal = new Button();
             SuspendLayout();
             // 
             // label1
@@ -126,7 +129,6 @@
             CBX_TEMA.Name = "CBX_TEMA";
             CBX_TEMA.Size = new Size(117, 23);
             CBX_TEMA.TabIndex = 9;
-            CBX_TEMA.SelectedIndexChanged += CBX_TEMA_SelectedIndexChanged;
             // 
             // DTP_HORAINICIO
             // 
@@ -210,11 +212,40 @@
             DTP_DATA.Size = new Size(200, 23);
             DTP_DATA.TabIndex = 35;
             // 
-            // TelaAluguelFom
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(12, 121);
+            label9.Name = "label9";
+            label9.Size = new Size(116, 15);
+            label9.TabIndex = 36;
+            label9.Text = "Percentual Desconto";
+            // 
+            // txtPercentual
+            // 
+            txtPercentual.Location = new Point(133, 118);
+            txtPercentual.Name = "txtPercentual";
+            txtPercentual.Size = new Size(83, 23);
+            txtPercentual.TabIndex = 37;
+            // 
+            // btnCalcularValorTotal
+            // 
+            btnCalcularValorTotal.Location = new Point(168, 298);
+            btnCalcularValorTotal.Name = "btnCalcularValorTotal";
+            btnCalcularValorTotal.Size = new Size(69, 23);
+            btnCalcularValorTotal.TabIndex = 38;
+            btnCalcularValorTotal.Text = "Calcular";
+            btnCalcularValorTotal.UseVisualStyleBackColor = true;
+            btnCalcularValorTotal.Click += btnCalcularValorTotal_Click;
+            // 
+            // TelaAluguelForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(410, 434);
+            Controls.Add(btnCalcularValorTotal);
+            Controls.Add(txtPercentual);
+            Controls.Add(label9);
             Controls.Add(DTP_DATA);
             Controls.Add(label8);
             Controls.Add(txtId);
@@ -233,7 +264,7 @@
             Controls.Add(CBX_CLIENTE);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "TelaAluguelFom";
+            Name = "TelaAluguelForm";
             Text = "TelaAluguelFom";
             ResumeLayout(false);
             PerformLayout();
@@ -259,5 +290,8 @@
         private TextBox txtId;
         private Label label8;
         private DateTimePicker DTP_DATA;
+        private Label label9;
+        private TextBox txtPercentual;
+        private Button btnCalcularValorTotal;
     }
 }

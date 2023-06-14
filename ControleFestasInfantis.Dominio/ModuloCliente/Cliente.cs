@@ -11,7 +11,7 @@ namespace ControleFestasInfantis.Dominio.ModuloCliente
         public string nome;
         public string telefone;
         public string cpf;
-
+        public int numeroAlugueis;
         public Cliente(string nome, string telefone, string cpf)
         {
             this.nome = nome;

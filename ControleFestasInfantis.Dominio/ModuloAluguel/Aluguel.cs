@@ -18,6 +18,7 @@ namespace ControleFestasInfantis.Dominio.ModuloAluguel
         public decimal valorTotal;
         public DateTime horaInicio, horaTermino;
         public String endereco;
+        public decimal percentualDesconto;
 
         public Aluguel(Cliente cliente, Tema tema, DateTime date, decimal valorTotal, DateTime horaInicio, DateTime horaTermino, string endereco)
         {
@@ -53,10 +54,28 @@ namespace ControleFestasInfantis.Dominio.ModuloAluguel
                 erros.Add("A hora de conclusão não pode ser menor que a hora de criação");
             if (date > DateTime.Now)
                 erros.Add("A data do evento não pode ser menor que a data atual");
-            if(string.IsNullOrEmpty(endereco))
+            if (string.IsNullOrEmpty(endereco))
                 erros.Add("O campo 'endereço' é obrigatório");
 
             return erros.ToArray();
+        }
+        public void AumentarQuantidadeAluguel()
+        {
+            cliente.numeroAlugueis++;
+        }
+        public void DiminuirQuantidadeAluguel()
+        {
+            cliente.numeroAlugueis--;
+        }
+
+        public void ContarQuantidadeAlugueis()
+        {
+            if(cliente.numeroAlugueis == 0)
+            {
+                decimal percentual = valorTotal * (1/100);
+                valorTotal -= percentual;
+            }
+            
         }
     }
 }

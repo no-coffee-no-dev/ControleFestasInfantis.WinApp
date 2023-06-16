@@ -36,7 +36,7 @@ namespace ControleFestasInfantis.Dominio.ModuloCliente
                 erros.Add("O campo 'nome' deve ter no mínimo 5 letras");
             if (telefone.EndsWith('-'))
                 erros.Add("O campo 'telefone' é obrigatório");
-            if (cpf.EndsWith(' '))
+            if (cpf.EndsWith('-'))
                 erros.Add("O campo 'cpf' é obrigatório");
 
             return erros.ToArray();

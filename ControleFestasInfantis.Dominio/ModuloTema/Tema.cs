@@ -17,12 +17,14 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
         {
             this.nome = nome;
             this.itens = itens;
+            valorTema = ObterValorTema();
         }
 
         public override void Atualizar(Tema entidadeAtualizada)
         {
             nome = entidadeAtualizada.nome;
             itens = entidadeAtualizada.itens;
+            valorTema = ObterValorTema();
         }
 
         public decimal ObterValorTema()
@@ -38,9 +40,11 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
         public override string[] Validar()
         {
             List<string> erros = new List<string>();
-
+           
             if (string.IsNullOrEmpty(nome))
                 erros.Add("O campo 'nome' é obrigatório");
+            if (itens.Count == 0)
+                erros.Add("é obrigatório ter itens");
             if (itens.Count == 0)
                 erros.Add("é obrigatório ter itens");
 
@@ -49,6 +53,15 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
         public override string ToString()
         {
             return $"{nome}";
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Tema tema &&
+                   id == tema.id &&
+                   nome == tema.nome &&
+                   EqualityComparer<List<Item>>.Default.Equals(itens, tema.itens) &&
+                   valorTema == tema.valorTema;
         }
     }
 }

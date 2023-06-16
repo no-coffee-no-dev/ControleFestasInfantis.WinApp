@@ -99,12 +99,21 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
 
             if (opcaoEscolhida == DialogResult.OK)
             {
-                repositorioTema.Atualizar(telaTema.Tema.id, telaTema.Tema);
+                if (repositorioTema.VerificaSeOTemaJaExiste(telaTema.Tema,true) == true)
+                {
+                    MessageBox.Show($"Um Tema com esse nome já existe!",
+                        "Edição de Temas",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+
+                    return;
+                }
+                else
+                    repositorioTema.Atualizar(telaTema.Tema.id, telaTema.Tema);
+
 
                 CarregarEntidades();
             }
-
-
         }
 
 
@@ -123,8 +132,17 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
             if (opcaoEscolhida == DialogResult.OK)
             {
                 Tema tema = telaTema.Tema;
+                if (repositorioTema.VerificaSeOTemaJaExiste(telaTema.Tema,false) == true)
+                {
+                    MessageBox.Show($"Um Tema com esse nome já existe!",
+                        "Inserção de Temas",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
 
-                repositorioTema.Inserir(tema);
+                    return;
+                }
+                else
+                    repositorioTema.Inserir(tema);
 
                 CarregarEntidades();
             }

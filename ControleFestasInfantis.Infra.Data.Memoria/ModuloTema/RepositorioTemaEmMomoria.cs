@@ -14,5 +14,36 @@ namespace ControleFestasInfantis.Infra.Data.Memoria.ModuloTema
         {
             listaEntidades = listaDeEntidades;
         }
+
+        public bool VerificaSeOTemaJaExiste(Tema temaAtual, bool ehEdicao)
+        {
+            bool naoExiste = false;
+
+            if(ehEdicao == true)
+            {
+                foreach (Tema tema in listaEntidades)
+                {
+                    if (tema.nome == temaAtual.nome && tema.valorTema == temaAtual.valorTema)
+                        return true;
+                    else
+                        naoExiste = true;
+                }
+            }
+            else
+            {
+                foreach (Tema tema in listaEntidades)
+                {
+                    if (tema.nome == temaAtual.nome)
+                        return true;
+                    else
+                        naoExiste = true;
+                }
+
+            }
+            if (naoExiste == true)
+                return false;
+            else
+                return false;
+        }
     }
 }

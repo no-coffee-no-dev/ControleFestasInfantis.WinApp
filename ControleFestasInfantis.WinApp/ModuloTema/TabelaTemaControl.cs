@@ -34,6 +34,12 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
                     Name = "nome",
                     HeaderText = "Nome"
                 }
+                ,
+                new DataGridViewTextBoxColumn()
+                {
+                    Name = "valorTema",
+                    HeaderText = "Valor"
+                }
             };
 
             tabelaTema.Columns.AddRange(colunas);
@@ -43,7 +49,7 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
             tabelaTema.Rows.Clear();
             foreach (Tema tema in temas)
             {
-                tabelaTema.Rows.Add(tema.id, tema.nome);
+                tabelaTema.Rows.Add(tema.id, tema.nome,tema.valorTema);
             }
         }
 

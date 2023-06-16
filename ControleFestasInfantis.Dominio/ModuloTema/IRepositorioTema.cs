@@ -8,5 +8,6 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
 {
     public interface IRepositorioTema : IRepositorio<Tema>
     {
+        public bool VerificaSeOTemaJaExiste(Tema tema, bool ehEdicao);
     }
 }

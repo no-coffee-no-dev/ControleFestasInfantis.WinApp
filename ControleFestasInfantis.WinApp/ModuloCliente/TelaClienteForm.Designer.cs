@@ -147,7 +147,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "TelaClienteForm";
-            Text = "Tela Cliente";
+            Text = "Cadastrar Cliente";
             ResumeLayout(false);
             PerformLayout();
         }

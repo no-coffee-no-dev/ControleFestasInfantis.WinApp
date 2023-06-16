@@ -9,6 +9,7 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
         public TelaVisualizarItensForm(Tema tema)
         {
             InitializeComponent();
+            this.ConfigurarDialog();
             ConfigurarTela(tema);
         }
         public void ConfigurarTela(Tema tema)

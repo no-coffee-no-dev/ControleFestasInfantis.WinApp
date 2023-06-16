@@ -10,14 +10,15 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
         public TelaTemaForm(IRepositorioItem repositorioItem)
         {
             InitializeComponent();
-            ConfigurarLista(repositorioItem);          
+            this.ConfigurarDialog();
+            ConfigurarLista(repositorioItem);
         }
 
-        public TelaTemaForm(IRepositorioItem repositorioItem,Tema tema)
+        public TelaTemaForm(IRepositorioItem repositorioItem, Tema tema)
         {
             InitializeComponent();
             ConfigurarLista(repositorioItem);
-            AlterarListaDeItems(repositorioItem,tema);
+            AlterarListaDeItems(repositorioItem, tema);
 
         }
 
@@ -33,7 +34,7 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
             }
         }
 
-        public void AlterarListaDeItems(IRepositorioItem repositorioItem,Tema tema)
+        public void AlterarListaDeItems(IRepositorioItem repositorioItem, Tema tema)
         {
             listaItens.Items.Clear();
 
@@ -56,8 +57,8 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
         private void ConfigurarLista(IRepositorioItem repositorioItem)
         {
             foreach (Item item in repositorioItem.RetornarTodos())
-            {               
-                listaItens.Items.Add(item);               
+            {
+                listaItens.Items.Add(item);
             }
         }
         private Tema ObterTema()

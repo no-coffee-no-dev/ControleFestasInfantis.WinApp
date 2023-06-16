@@ -145,7 +145,7 @@
             Controls.Add(txtId);
             Controls.Add(label1);
             Name = "TelaItemForm";
-            Text = "Tela Item";
+            Text = "Cadastrar Item";
             ResumeLayout(false);
             PerformLayout();
         }

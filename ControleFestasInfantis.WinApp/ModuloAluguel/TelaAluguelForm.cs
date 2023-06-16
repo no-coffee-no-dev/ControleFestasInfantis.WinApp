@@ -20,6 +20,7 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
         public TelaAluguelForm(IRepositorioTema repositorioTema, IRepositorioCliente repositorioCliente)
         {
             InitializeComponent();
+            this.ConfigurarDialog();
             AdicionaAComboBox(repositorioCliente, repositorioTema);
 
         }
@@ -117,7 +118,7 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
                 percentual = Convert.ToDecimal(txtPercentual.Text);
             decimal porcentagem = valorTotal * (percentual / 100);
             return valorTotal - porcentagem;
-            
+
             return valorTotal - porcentagem;
         }
 

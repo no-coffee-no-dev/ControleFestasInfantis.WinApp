@@ -54,7 +54,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 30);
+            label1.Location = new Point(105, 25);
             label1.Name = "label1";
             label1.Size = new Size(18, 15);
             label1.TabIndex = 0;
@@ -63,7 +63,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 59);
+            label2.Location = new Point(79, 59);
             label2.Name = "label2";
             label2.Size = new Size(44, 15);
             label2.TabIndex = 2;
@@ -72,7 +72,7 @@
             // CBX_CLIENTE
             // 
             CBX_CLIENTE.FormattingEnabled = true;
-            CBX_CLIENTE.Location = new Point(70, 59);
+            CBX_CLIENTE.Location = new Point(133, 56);
             CBX_CLIENTE.Name = "CBX_CLIENTE";
             CBX_CLIENTE.Size = new Size(117, 23);
             CBX_CLIENTE.TabIndex = 3;
@@ -80,7 +80,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 197);
+            label3.Location = new Point(58, 197);
             label3.Name = "label3";
             label3.Size = new Size(65, 15);
             label3.TabIndex = 4;
@@ -89,7 +89,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 232);
+            label4.Location = new Point(44, 232);
             label4.Name = "label4";
             label4.Size = new Size(79, 15);
             label4.TabIndex = 5;
@@ -98,7 +98,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 301);
+            label5.Location = new Point(58, 299);
             label5.Name = "label5";
             label5.Size = new Size(61, 15);
             label5.TabIndex = 6;
@@ -107,7 +107,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(12, 269);
+            label6.Location = new Point(7, 269);
             label6.Name = "label6";
             label6.Size = new Size(115, 15);
             label6.TabIndex = 7;
@@ -116,7 +116,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(12, 88);
+            label7.Location = new Point(88, 92);
             label7.Name = "label7";
             label7.Size = new Size(35, 15);
             label7.TabIndex = 8;
@@ -125,7 +125,7 @@
             // CBX_TEMA
             // 
             CBX_TEMA.FormattingEnabled = true;
-            CBX_TEMA.Location = new Point(70, 85);
+            CBX_TEMA.Location = new Point(133, 89);
             CBX_TEMA.Name = "CBX_TEMA";
             CBX_TEMA.Size = new Size(117, 23);
             CBX_TEMA.TabIndex = 9;
@@ -133,7 +133,7 @@
             // DTP_HORAINICIO
             // 
             DTP_HORAINICIO.Format = DateTimePickerFormat.Time;
-            DTP_HORAINICIO.Location = new Point(97, 197);
+            DTP_HORAINICIO.Location = new Point(133, 191);
             DTP_HORAINICIO.Name = "DTP_HORAINICIO";
             DTP_HORAINICIO.ShowUpDown = true;
             DTP_HORAINICIO.Size = new Size(200, 23);
@@ -142,7 +142,7 @@
             // DTP_HORATERMINO
             // 
             DTP_HORATERMINO.Format = DateTimePickerFormat.Time;
-            DTP_HORATERMINO.Location = new Point(97, 232);
+            DTP_HORATERMINO.Location = new Point(133, 226);
             DTP_HORATERMINO.Name = "DTP_HORATERMINO";
             DTP_HORATERMINO.ShowUpDown = true;
             DTP_HORATERMINO.Size = new Size(200, 23);
@@ -150,7 +150,7 @@
             // 
             // TXT_VALORTOTAL
             // 
-            TXT_VALORTOTAL.Location = new Point(79, 298);
+            TXT_VALORTOTAL.Location = new Point(133, 299);
             TXT_VALORTOTAL.Name = "TXT_VALORTOTAL";
             TXT_VALORTOTAL.ReadOnly = true;
             TXT_VALORTOTAL.Size = new Size(83, 23);
@@ -167,7 +167,7 @@
             // 
             btnGravar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(106, 364);
+            btnGravar.Location = new Point(223, 342);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(75, 41);
             btnGravar.TabIndex = 31;
@@ -179,7 +179,7 @@
             // 
             btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(202, 364);
+            btnCancelar.Location = new Point(316, 342);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 41);
             btnCancelar.TabIndex = 32;
@@ -188,7 +188,7 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(70, 27);
+            txtId.Location = new Point(133, 22);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(100, 23);
@@ -198,7 +198,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(12, 159);
+            label8.Location = new Point(36, 157);
             label8.Name = "label8";
             label8.Size = new Size(87, 15);
             label8.TabIndex = 34;
@@ -207,7 +207,7 @@
             // DTP_DATA
             // 
             DTP_DATA.Format = DateTimePickerFormat.Short;
-            DTP_DATA.Location = new Point(97, 153);
+            DTP_DATA.Location = new Point(133, 151);
             DTP_DATA.Name = "DTP_DATA";
             DTP_DATA.Size = new Size(200, 23);
             DTP_DATA.TabIndex = 35;
@@ -215,7 +215,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(12, 121);
+            label9.Location = new Point(7, 121);
             label9.Name = "label9";
             label9.Size = new Size(116, 15);
             label9.TabIndex = 36;
@@ -230,7 +230,7 @@
             // 
             // btnCalcularValorTotal
             // 
-            btnCalcularValorTotal.Location = new Point(168, 298);
+            btnCalcularValorTotal.Location = new Point(223, 299);
             btnCalcularValorTotal.Name = "btnCalcularValorTotal";
             btnCalcularValorTotal.Size = new Size(69, 23);
             btnCalcularValorTotal.TabIndex = 38;
@@ -242,7 +242,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(410, 434);
+            ClientSize = new Size(403, 395);
             Controls.Add(btnCalcularValorTotal);
             Controls.Add(txtPercentual);
             Controls.Add(label9);
@@ -265,7 +265,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "TelaAluguelForm";
-            Text = "TelaAluguelFom";
+            Text = "Cadastrar Aluguel";
             ResumeLayout(false);
             PerformLayout();
         }

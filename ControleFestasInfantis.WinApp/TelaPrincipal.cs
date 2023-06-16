@@ -115,7 +115,7 @@ namespace ControleFestasInfantis.WinApp
         }
         private void aluguelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            controlador = new ControladorAluguel(repositorioAluguel,repositorioCliente,repositorioTema);
+            controlador = new ControladorAluguel(repositorioAluguel, repositorioCliente, repositorioTema);
             ConfigurarTelaPrincipal(controlador);
 
         }
@@ -167,6 +167,6 @@ namespace ControleFestasInfantis.WinApp
             return false;
         }
 
-        
+
     }
 }

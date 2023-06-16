@@ -127,7 +127,7 @@
             Controls.Add(label1);
             Controls.Add(txtId);
             Name = "TelaTemaForm";
-            Text = "Inserir Tema";
+            Text = "Cadastrar Tema";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

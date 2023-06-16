@@ -18,6 +18,7 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
         public TelaItemForm()
         {
             InitializeComponent();
+            this.ConfigurarDialog();
         }
 
         public Item Item
@@ -64,10 +65,10 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
             double preco = 0;
             try
             {
-               preco = Convert.ToDouble(txtPreco.Text);
+                preco = Convert.ToDouble(txtPreco.Text);
             }
-            catch(FormatException)
-            {}
+            catch (FormatException)
+            { }
             return new Item(nome, tipo, preco);
         }
 

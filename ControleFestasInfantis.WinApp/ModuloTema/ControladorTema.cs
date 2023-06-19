@@ -1,4 +1,5 @@
 ﻿using ControleFestasInfantis.Dominio.Compartilhado;
+using ControleFestasInfantis.Dominio.ModuloAluguel;
 using ControleFestasInfantis.Dominio.ModuloCliente;
 using ControleFestasInfantis.Dominio.ModuloItem;
 using ControleFestasInfantis.Dominio.ModuloTema;
@@ -57,6 +58,16 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
             {
                 MessageBox.Show($"Selecione um tema primeiro!",
                     "Exclusão de Temas",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
+                return;
+            }
+
+            if (tema.alugado == true)
+            {
+                MessageBox.Show($"Selecione um Tema sem Aluguel primeiro!",
+                    "Exclusão de Aluguel",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
 
@@ -165,9 +176,6 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
 
             TelaVisualizarItensForm telaTema = new TelaVisualizarItensForm(tema);
             telaTema.ShowDialog();
-
-            telaTema.ShowDialog();
-
         }
 
 

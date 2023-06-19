@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControleFestasInfantis.Dominio.ModuloAluguel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +12,13 @@ namespace ControleFestasInfantis.Dominio.ModuloCliente
         public string nome;
         public string telefone;
         public string cpf;
-        public int numeroAlugueis;
+        public List<Aluguel> alugueisDoCliente;
         public Cliente(string nome, string telefone, string cpf)
         {
             this.nome = nome;
             this.telefone = telefone;
             this.cpf = cpf;
+            alugueisDoCliente = new List<Aluguel>();
         }
 
         public override void Atualizar(Cliente entidadeAtualizada)
@@ -24,6 +26,11 @@ namespace ControleFestasInfantis.Dominio.ModuloCliente
             nome = entidadeAtualizada.nome;
             telefone = entidadeAtualizada.telefone;
             cpf = entidadeAtualizada.cpf;
+            alugueisDoCliente = entidadeAtualizada.alugueisDoCliente;
+        }
+        public void InserirAluguel(Aluguel aluguel)
+        {
+            alugueisDoCliente.Add(aluguel);
         }
 
         public override string[] Validar()
@@ -43,7 +50,7 @@ namespace ControleFestasInfantis.Dominio.ModuloCliente
         }
         public override string ToString()
         {
-            return $"{nome} , Telefone {telefone}, cpf {cpf} ";
+            return $"{nome}";
         }
     }
 }

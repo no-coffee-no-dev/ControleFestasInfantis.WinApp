@@ -1,5 +1,7 @@
 ﻿using ControleFestasInfantis.Dominio.Compartilhado;
 using ControleFestasInfantis.Dominio.ModuloCliente;
+using ControleFestasInfantis.Dominio.ModuloTema;
+using ControleFestasInfantis.WinApp.ModuloTema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +33,7 @@ namespace ControleFestasInfantis.WinApp.ModuloCliente
 
         public override bool BotaoEditarAtivado => true;
 
-        public override bool BotaoVisualizarItensAtivado => false;
+        public override bool BotaoVisualizarItensAtivado => true;
 
         public override void Deletar()
         {
@@ -108,7 +110,23 @@ namespace ControleFestasInfantis.WinApp.ModuloCliente
         }
 
 
+        public override void VisualizarItem() 
+        {
+            Cliente cliente = ObterEntidadeSelecionado();
 
+            if (cliente == null || cliente.alugueisDoCliente.Count == 0)
+            {
+                MessageBox.Show($"Selecione um cliente com aluguéis primeiro!",
+                    "Visualização de Itens do Tema",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
+                return;
+            }
+
+            TelaVisualizarAlugueisForm telaVisualizarAlugueis = new TelaVisualizarAlugueisForm(cliente);
+            telaVisualizarAlugueis.ShowDialog();
+        }
 
 
         public override UserControl ObterListagem()

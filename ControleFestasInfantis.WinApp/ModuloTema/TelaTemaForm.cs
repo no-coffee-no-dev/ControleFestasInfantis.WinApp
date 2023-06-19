@@ -71,7 +71,7 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
                 itens.Add(item);
             }
 
-            return new Tema(nome, itens);
+            return new Tema(nome, itens,false);
         }
 
         private void btnGravar_Click_1(object sender, EventArgs e)

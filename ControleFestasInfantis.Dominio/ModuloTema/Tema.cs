@@ -13,10 +13,12 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
         public string nome;
         public List<Item> itens;
         public decimal valorTema;
-        public Tema(string nome, List<Item> itens)
+        public bool alugado;
+        public Tema(string nome, List<Item> itens, bool alugado)
         {
             this.nome = nome;
             this.itens = itens;
+            this.alugado = alugado;
             valorTema = ObterValorTema();
         }
 
@@ -24,6 +26,7 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
         {
             nome = entidadeAtualizada.nome;
             itens = entidadeAtualizada.itens;
+            alugado = entidadeAtualizada.alugado;
             valorTema = ObterValorTema();
         }
 
@@ -53,6 +56,11 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
         public override string ToString()
         {
             return $"{nome}";
+        }
+
+        public void AlugarTema()
+        {
+            alugado = true;
         }
 
         public override bool Equals(object? obj)

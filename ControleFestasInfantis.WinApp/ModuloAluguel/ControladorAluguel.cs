@@ -2,6 +2,7 @@
 using ControleFestasInfantis.Dominio.ModuloCliente;
 using ControleFestasInfantis.Dominio.ModuloItem;
 using ControleFestasInfantis.Dominio.ModuloTema;
+using ControleFestasInfantis.Infra.Data.Memoria.ModuloAluguel;
 using ControleFestasInfantis.WinApp.ModuloItem;
 using ControleFestasInfantis.WinApp.ModuloTema;
 using System;
@@ -92,7 +93,6 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
             if (opcaoEscolhida == DialogResult.OK)
             {
                 repositorioAluguel.Atualizar(telaAluguel.Aluguel.id, telaAluguel.Aluguel);
-
                 CarregarEntidades();
             }
         }
@@ -106,7 +106,7 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
             if (opcaoEscolhida == DialogResult.OK)
             {
                 Aluguel aluguel = telaAluguel.Aluguel;
-
+                aluguel.tema.AlugarTema();
                 repositorioAluguel.Inserir(aluguel);
 
                 CarregarEntidades();

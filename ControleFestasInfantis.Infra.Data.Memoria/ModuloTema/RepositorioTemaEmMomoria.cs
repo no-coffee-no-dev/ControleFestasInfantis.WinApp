@@ -1,4 +1,5 @@
 ﻿using ControleFestasInfantis.Dominio.ModuloCliente;
+using ControleFestasInfantis.Dominio.ModuloItem;
 using ControleFestasInfantis.Dominio.ModuloTema;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,26 @@ namespace ControleFestasInfantis.Infra.Data.Memoria.ModuloTema
                 return false;
             else
                 return false;
+        }
+        public void VerificaOsItensDoTema(IRepositorioTema repositorioTema, IRepositorioItem repositorioItem)
+        {
+            foreach (Item item in repositorioItem.RetornarTodos())
+            {
+               item.estahUtilizado = false;               
+            }
+
+            foreach (Tema tema in repositorioTema.RetornarTodos())
+            {
+                foreach (Item item in repositorioItem.RetornarTodos())
+                {
+                    if (tema.itens.Contains(item))
+                    {
+                        item.UtilizarEsteItem();
+                    }
+                }
+            }
+            
+            
         }
     }
 }

@@ -110,7 +110,7 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
 
             if (opcaoEscolhida == DialogResult.OK)
             {
-                if (repositorioTema.VerificaSeOTemaJaExiste(telaTema.Tema,true) == true)
+                if (repositorioTema.VerificaSeOTemaJaExiste(telaTema.Tema, true) == true)
                 {
                     MessageBox.Show($"Um Tema com esse nome já existe!",
                         "Edição de Temas",
@@ -120,7 +120,10 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
                     return;
                 }
                 else
-                    repositorioTema.Atualizar(telaTema.Tema.id, telaTema.Tema);
+                {
+                    repositorioTema.Atualizar(telaTema.Tema.id, telaTema.Tema); 
+                    repositorioTema.VerificaOsItensDoTema(repositorioTema, repositorioItem);
+                }
 
 
                 CarregarEntidades();
@@ -153,7 +156,11 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
                     return;
                 }
                 else
+                {                    
                     repositorioTema.Inserir(tema);
+                    repositorioTema.VerificaOsItensDoTema(repositorioTema, repositorioItem);
+                }
+                    
 
                 CarregarEntidades();
             }

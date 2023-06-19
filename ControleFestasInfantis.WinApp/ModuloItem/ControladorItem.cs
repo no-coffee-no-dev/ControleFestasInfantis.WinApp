@@ -1,4 +1,5 @@
 ﻿using ControleFestasInfantis.Dominio.ModuloItem;
+using ControleFestasInfantis.Dominio.ModuloTema;
 using ControleFestasInfantis.WinApp.ModuloTema;
 using System;
 using System.Collections.Generic;
@@ -59,6 +60,15 @@ namespace ControleFestasInfantis.WinApp.ModuloItem
 
                 return;
             }
+            if (item.estahUtilizado == true)
+            {
+                MessageBox.Show($"Selecione um item não utilizado primeiro!",
+                    "Exclusão de Itens",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
+                return;
+            }
 
             DialogResult opcaoEscolhida = MessageBox.Show($"Deseja excluir o Item {item.nome}?", "Exclusão de Itens",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -91,7 +101,17 @@ namespace ControleFestasInfantis.WinApp.ModuloItem
 
             if (opcaoEscolhida == DialogResult.OK)
             {
-                repositorioItem.Atualizar(telaItem.Item.id, telaItem.Item);
+                if (repositorioItem.VerificaSeOItemJaExiste(telaItem.Item,true) == true)
+                {
+                    MessageBox.Show($"Um Item com esse nome já existe!",
+                        "Inserção de Item",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+
+                    return;
+                }
+                else
+                    repositorioItem.Atualizar(telaItem.Item.id, telaItem.Item);
 
                 CarregarEntidades();
             }
@@ -106,8 +126,19 @@ namespace ControleFestasInfantis.WinApp.ModuloItem
             if (opcaoEscolhida == DialogResult.OK)
             {
                 Item item = telaItem.Item;
+                if (repositorioItem.VerificaSeOItemJaExiste(telaItem.Item,false) == true)
+                {
+                    MessageBox.Show($"Um Item com esse nome já existe!",
+                        "Inserção de Item",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
 
-                repositorioItem.Inserir(item);
+                    return;
+                }
+                else
+                    repositorioItem.Inserir(item);
+                
+                   
 
                 CarregarEntidades();
             }

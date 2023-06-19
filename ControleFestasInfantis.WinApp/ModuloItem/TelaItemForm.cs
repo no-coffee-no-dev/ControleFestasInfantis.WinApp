@@ -69,7 +69,7 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
             }
             catch (FormatException)
             { }
-            return new Item(nome, tipo, preco);
+            return new Item(nome, tipo, preco,false);
         }
 
     }

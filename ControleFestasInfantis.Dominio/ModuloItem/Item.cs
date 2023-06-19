@@ -12,12 +12,13 @@ namespace ControleFestasInfantis.Dominio.ModuloItem
         public string nome;        
         public string tipo;
         public double preco;
-
-        public Item(string nome, string tipo, double preco)
+        public bool estahUtilizado;
+        public Item(string nome, string tipo, double preco, bool estahUtilizado)
         {
             this.nome = nome;
             this.tipo = tipo;
             this.preco = preco;
+            this.estahUtilizado = estahUtilizado;
         }
 
 
@@ -26,6 +27,7 @@ namespace ControleFestasInfantis.Dominio.ModuloItem
             nome = entidadeAtualizada.nome;
             tipo = entidadeAtualizada.tipo;
             preco = entidadeAtualizada.preco;
+            estahUtilizado = entidadeAtualizada.estahUtilizado;
         }
 
         public override string[] Validar()
@@ -42,6 +44,11 @@ namespace ControleFestasInfantis.Dominio.ModuloItem
 
 
             return erros.ToArray();
+        }
+
+        public void UtilizarEsteItem()
+        {
+            estahUtilizado = true;
         }
         public override string ToString()
         {

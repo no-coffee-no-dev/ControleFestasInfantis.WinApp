@@ -107,6 +107,7 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
             {
                 Aluguel aluguel = telaAluguel.Aluguel;
                 aluguel.tema.AlugarTema();
+                aluguel.cliente.InserirAluguel(aluguel);
                 repositorioAluguel.Inserir(aluguel);
 
                 CarregarEntidades();

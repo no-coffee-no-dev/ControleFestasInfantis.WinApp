@@ -59,23 +59,30 @@ namespace ControleFestasInfantis.Dominio.ModuloAluguel
 
             return erros.ToArray();
         }
-        public void AumentarQuantidadeAluguel()
+
+        public override string? ToString()
         {
-            cliente.numeroAlugueis++;
-        }
-        public void DiminuirQuantidadeAluguel()
-        {
-            cliente.numeroAlugueis--;
+            return $"Tema: {tema.nome}   |   Data: {date.ToString("d")}   |   Preço {valorTotal}";
         }
 
-        public void ContarQuantidadeAlugueis()
-        {
-            if(cliente.numeroAlugueis == 0)
-            {
-                decimal percentual = valorTotal * (1/100);
-                valorTotal -= percentual;
-            }
-            
-        }
+
+        //public void AumentarQuantidadeAluguel()
+        //{
+        //    cliente.numeroAlugueis++;
+        //}
+        //public void DiminuirQuantidadeAluguel()
+        //{
+        //    cliente.numeroAlugueis--;
+        //}
+
+        //public void ContarQuantidadeAlugueis()
+        //{
+        //    if(cliente.numeroAlugueis == 0)
+        //    {
+        //        decimal percentual = valorTotal * (1/100);
+        //        valorTotal -= percentual;
+        //    }
+
+        //}
     }
 }

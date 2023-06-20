@@ -43,6 +43,7 @@
             toolStripSeparator2 = new ToolStripSeparator();
             btnVisualizarItens = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
+            btn_ConfigurarDesconto = new ToolStripButton();
             lblTipoCadastro = new ToolStripLabel();
             panelRegistros = new Panel();
             statusStrip1 = new StatusStrip();
@@ -111,7 +112,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnDeletar, toolStripSeparator2, btnVisualizarItens, toolStripSeparator1, lblTipoCadastro });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnDeletar, toolStripSeparator2, btnVisualizarItens, toolStripSeparator1, btn_ConfigurarDesconto, lblTipoCadastro });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 45);
@@ -175,6 +176,18 @@
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 45);
+            // 
+            // btn_ConfigurarDesconto
+            // 
+            btn_ConfigurarDesconto.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btn_ConfigurarDesconto.Image = Properties.Resources.discount1;
+            btn_ConfigurarDesconto.ImageScaling = ToolStripItemImageScaling.None;
+            btn_ConfigurarDesconto.ImageTransparentColor = Color.Magenta;
+            btn_ConfigurarDesconto.Name = "btn_ConfigurarDesconto";
+            btn_ConfigurarDesconto.Padding = new Padding(7);
+            btn_ConfigurarDesconto.Size = new Size(42, 42);
+            btn_ConfigurarDesconto.Text = "Configurar desconto";
+            btn_ConfigurarDesconto.Click += btn_ConfigurarDesconto_Click;
             // 
             // lblTipoCadastro
             // 
@@ -250,5 +263,7 @@
         private ToolStripStatusLabel lblRodape;
         private ToolStripButton btnVisualizarItens;
         private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton btn_ConfigurarDesconto;
+        private ToolStripButton toolStripButton2;
     }
 }

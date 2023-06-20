@@ -47,12 +47,8 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
                     Name = "tema.nome",
                     HeaderText = "Tema"
                 }
-                ,
-                new DataGridViewTextBoxColumn()
-                {
-                    Name = "valorTotal",
-                    HeaderText = "Valor Total"
-                }
+                
+                
                 ,
                 new DataGridViewTextBoxColumn()
                 {
@@ -71,6 +67,12 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
                     Name = "horaTermino",
                     HeaderText = "Hora de Termino"
                 }
+                ,
+                new DataGridViewTextBoxColumn()
+                {
+                    Name = "valorTotal",
+                    HeaderText = "Valor Total"
+                }
             };
 
             tabelaAluguels.Columns.AddRange(colunas);
@@ -80,7 +82,7 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
             tabelaAluguels.Rows.Clear();
             foreach (Aluguel aluguel in aluguels)
             {
-                tabelaAluguels.Rows.Add(aluguel.id, aluguel.cliente.nome, aluguel.tema.nome, aluguel.valorTotal, aluguel.date.ToString("dd/MM/yy"),aluguel.horaInicio.ToString("t"),aluguel.horaTermino.ToString("t"));
+                tabelaAluguels.Rows.Add(aluguel.id, aluguel.cliente.nome, aluguel.tema.nome, aluguel.date.ToString("dd/MM/yy"),aluguel.horaInicio.ToString("t"),aluguel.horaTermino.ToString("t"), aluguel.valorTotal);
             }
         }
 

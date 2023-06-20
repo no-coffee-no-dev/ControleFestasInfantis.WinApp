@@ -14,11 +14,12 @@ namespace ControleFestasInfantis.WinApp.Compartilhado
         public abstract string ToolTipEditar { get; }
         public abstract string ToolTipExcluir { get; }
 
-      
+
         public abstract bool BotaoInserirAtivado { get; }
         public abstract bool BotaoDeletarAtivado { get; }
         public abstract bool BotaoEditarAtivado { get; }
         public abstract bool BotaoVisualizarItensAtivado { get; }
+        public abstract bool BotaoConfigurarDescontoAtivado { get; }
 
 
 
@@ -30,10 +31,17 @@ namespace ControleFestasInfantis.WinApp.Compartilhado
         public abstract UserControl ObterListagem();
 
 
-        public virtual void VisualizarItem(){}
+        public virtual void VisualizarItem() { }
+
+        public virtual void ConfigurarDesconto() { }
 
 
         public abstract string ObterTipoCadastro();
         public abstract void CarregarEntidades();
+
+        
+        
+         
+        
     }
 }

@@ -9,7 +9,7 @@ namespace ControleFestasInfantis.Dominio.ModuloTema
 {
     public interface IRepositorioTema : IRepositorio<Tema>
     {
-        public bool VerificaSeOTemaJaExiste(Tema tema, bool ehEdicao);
-        public void VerificaOsItensDoTema(IRepositorioTema repositorioTema, IRepositorioItem repositorioItem);
+        void VerificaOsItensDoTema(IRepositorioTema repositorioTema, IRepositorioItem repositorioItem);
+        bool VerificaSeOTemaJaExiste(Tema tema, bool v);
     }
 }

@@ -18,7 +18,7 @@ namespace ControleFestasInfantis.Dominio.ModuloAluguel
         public decimal valorTotal;
         public DateTime horaInicio, horaTermino;
         public String endereco;
-        public decimal percentualDesconto;
+        
 
         public Aluguel(Cliente cliente, Tema tema, DateTime date, decimal valorTotal, DateTime horaInicio, DateTime horaTermino, string endereco)
         {
@@ -29,6 +29,7 @@ namespace ControleFestasInfantis.Dominio.ModuloAluguel
             this.horaInicio = horaInicio;
             this.horaTermino = horaTermino;
             this.endereco = endereco;
+            
         }
 
         public override void Atualizar(Aluguel entidadeAtualizada)
@@ -40,6 +41,7 @@ namespace ControleFestasInfantis.Dominio.ModuloAluguel
             horaInicio = entidadeAtualizada.horaInicio;
             horaTermino = entidadeAtualizada.horaTermino;
             endereco = entidadeAtualizada.endereco;
+            
         }
 
         public override string[] Validar()
@@ -66,23 +68,6 @@ namespace ControleFestasInfantis.Dominio.ModuloAluguel
         }
 
 
-        //public void AumentarQuantidadeAluguel()
-        //{
-        //    cliente.numeroAlugueis++;
-        //}
-        //public void DiminuirQuantidadeAluguel()
-        //{
-        //    cliente.numeroAlugueis--;
-        //}
-
-        //public void ContarQuantidadeAlugueis()
-        //{
-        //    if(cliente.numeroAlugueis == 0)
-        //    {
-        //        decimal percentual = valorTotal * (1/100);
-        //        valorTotal -= percentual;
-        //    }
-
-        //}
+   
     }
 }

@@ -3,6 +3,7 @@ using ControleFestasInfantis.Dominio.ModuloCliente;
 using ControleFestasInfantis.Dominio.ModuloItem;
 using ControleFestasInfantis.Dominio.ModuloTema;
 using ControleFestasInfantis.Infra.Data.Memoria.ModuloAluguel;
+using ControleFestasInfantis.WinApp.ModuloCliente;
 using ControleFestasInfantis.WinApp.ModuloItem;
 using ControleFestasInfantis.WinApp.ModuloTema;
 using System;
@@ -40,6 +41,8 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
         public override bool BotaoEditarAtivado => true;
 
         public override bool BotaoVisualizarItensAtivado => false;
+
+        public override bool BotaoConfigurarDescontoAtivado => true;
 
         public override void CarregarEntidades()
         {
@@ -134,6 +137,15 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
             int id = tabelaAluguel.ObterIdSelecionado();
 
             return repositorioAluguel.Busca(id);
+        }
+
+        public override void ConfigurarDesconto()
+        {
+            Tela_config tela_Config = new Tela_config();
+            tela_Config.ShowDialog();
+
+
+
         }
     }
 }

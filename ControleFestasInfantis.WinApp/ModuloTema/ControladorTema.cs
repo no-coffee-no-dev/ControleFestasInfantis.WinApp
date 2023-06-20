@@ -44,6 +44,8 @@ namespace ControleFestasInfantis.WinApp.ModuloTema
 
         public override bool BotaoVisualizarItensAtivado => true;
 
+        public override bool BotaoConfigurarDescontoAtivado => false;
+
         public override void CarregarEntidades()
         {
             List<Tema> temas = repositorioTema.RetornarTodos();

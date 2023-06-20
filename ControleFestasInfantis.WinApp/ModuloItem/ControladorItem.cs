@@ -37,6 +37,8 @@ namespace ControleFestasInfantis.WinApp.ModuloItem
 
         public override bool BotaoVisualizarItensAtivado => false;
 
+        public override bool BotaoConfigurarDescontoAtivado => false;
+
 
 
 

@@ -55,9 +55,8 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
             DTP_DATA.Value = value.date;
             DTP_HORAINICIO.Value = value.horaInicio;
             DTP_HORATERMINO.Value = value.horaTermino;
-            txtPercentual.Text = value.percentualDesconto.ToString();
             TXT_ENDERECO.Text = value.endereco;
-            TXT_VALORTOTAL.Text = value.valorTotal.ToString();
+            
 
         }
         public void AdicionaAComboBox(IRepositorioCliente repositorioCliente, IRepositorioTema repositorioTema)
@@ -100,6 +99,7 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
 
 
 
+
             return new Aluguel(cliente, tema, data, valorTotal, horaInicio, horaTermino, endereco);
         }
         private decimal ObterValorTotal()
@@ -113,19 +113,25 @@ namespace ControleFestasInfantis.WinApp.ModuloAluguel
                     valorTotal = tema.ObterValorTema();
                 }
             }
-            decimal percentual = 0;
-            if (txtPercentual.Text != "")
-                percentual = Convert.ToDecimal(txtPercentual.Text);
-            decimal porcentagem = valorTotal * (percentual / 100);
-            return valorTotal - porcentagem;
+            Cliente cliente1 = null;
+            foreach (Cliente cliente in CBX_CLIENTE.Items)
+            {
+                if (cliente.Equals(CBX_CLIENTE.SelectedItem))
+                {
+                    cliente1 = cliente;
+                }
+            }
 
-            return valorTotal - porcentagem;
+
+
+            decimal valorFinal = valorTotal * (Desconto.GerarDesconto(cliente1) / 100);
+
+            return valorTotal - valorFinal;
+
+
         }
 
-        private void btnCalcularValorTotal_Click(object sender, EventArgs e)
-        {
-            if (CBX_TEMA.SelectedItem != null)
-                TXT_VALORTOTAL.Text = ObterValorTotal().ToString();
-        }
+
+
     }
 }

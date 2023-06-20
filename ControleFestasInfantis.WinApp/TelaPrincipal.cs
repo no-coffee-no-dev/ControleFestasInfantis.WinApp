@@ -75,6 +75,7 @@ namespace ControleFestasInfantis.WinApp
             btnEditar.Enabled = controlador.BotaoEditarAtivado;
             btnDeletar.Enabled = controlador.BotaoDeletarAtivado;
             btnVisualizarItens.Enabled = controlador.BotaoVisualizarItensAtivado;
+            btn_ConfigurarDesconto.Enabled = controlador.BotaoConfigurarDescontoAtivado;
         }
 
         private void ConfigurarToolTips(ControladorBase controlador)
@@ -152,9 +153,13 @@ namespace ControleFestasInfantis.WinApp
                 controlador.VisualizarItem();
         }
 
+        private void btn_ConfigurarDesconto_Click(object sender, EventArgs e)
+        {
+            if (VerificaControladorVazio(controlador)) ;
+            else
+                controlador.ConfigurarDesconto();
 
-
-
+        }
 
 
         private bool VerificaControladorVazio(ControladorBase controlador)
@@ -167,6 +172,6 @@ namespace ControleFestasInfantis.WinApp
             return false;
         }
 
-
+       
     }
 }

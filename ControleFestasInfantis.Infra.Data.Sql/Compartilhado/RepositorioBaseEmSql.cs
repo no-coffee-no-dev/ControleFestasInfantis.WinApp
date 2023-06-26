@@ -104,7 +104,7 @@ namespace ControleFestasInfantis.Infra.Data.Sql.Compartilhado
             List<TEntidade> entidades = new();
 
             while (leitorEntidades.Read())
-            {
+    {
                 TEntidade entidade = ConverterParaEntidade(leitorEntidades);
 
                 entidades.Add(entidade);
@@ -120,5 +120,5 @@ namespace ControleFestasInfantis.Infra.Data.Sql.Compartilhado
 
         public abstract void ConfigurarParametros(SqlCommand comandoEditar, TEntidade novaEntidade);
     }
-}
+    }
 }

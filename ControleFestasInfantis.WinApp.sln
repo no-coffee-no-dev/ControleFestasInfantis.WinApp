@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2- Infra", "2- Infra", "{E9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Dominio", "3- Dominio", "{C938A0C2-0544-4EEA-97AE-B7E8908FC1A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFestasInfantis.Infra.Data.Sql", "ControleFestasInfantis.Infra.Data.Sql\ControleFestasInfantis.Infra.Data.Sql.csproj", "{D6547898-D2A6-4252-9DC6-72326BCD58BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FFFAA8C6-D7A2-40E2-86C5-4F345137F5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFFAA8C6-D7A2-40E2-86C5-4F345137F5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFFAA8C6-D7A2-40E2-86C5-4F345137F5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6547898-D2A6-4252-9DC6-72326BCD58BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6547898-D2A6-4252-9DC6-72326BCD58BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6547898-D2A6-4252-9DC6-72326BCD58BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6547898-D2A6-4252-9DC6-72326BCD58BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{939A3CC7-245F-4992-8882-F58A3101CE84} = {8F0898B8-8EB5-464E-AE96-1B4F919E98D3}
 		{218D235C-EB58-47E7-80D4-72DC98BB858C} = {E96A09F2-5504-462A-AD30-1190C987762C}
 		{FFFAA8C6-D7A2-40E2-86C5-4F345137F5A9} = {C938A0C2-0544-4EEA-97AE-B7E8908FC1A3}
+		{D6547898-D2A6-4252-9DC6-72326BCD58BA} = {E96A09F2-5504-462A-AD30-1190C987762C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7860478-A47E-48A7-82A6-3C70D0913373}
